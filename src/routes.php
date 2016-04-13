@@ -16,6 +16,6 @@ $app->get('/json/[{name}]', function ($request, $response, $args) {
     $mapper = new MessagesMapper($this->db);
     $messages = $mapper->getMessages();
 
-    $response->getBody()->write(var_export($messages, true));
+    $response->getBody()->write(json_encode($messages));
     return $response;
 });

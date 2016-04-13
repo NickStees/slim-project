@@ -7,7 +7,8 @@ class MessagesMapper extends Mapper
         $stmt = $this->db->query($sql);
         $results = [];
         while($row = $stmt->fetch()) {
-            $results[] = new MessageEntity($row);
+          //$results[] = new MessageEntity($row);
+          $results[] = $row;
         }
         return $results;
     }

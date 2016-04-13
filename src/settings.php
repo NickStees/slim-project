@@ -2,6 +2,8 @@
 return [
     'settings' => [
         'displayErrorDetails' => true, // set to false in production
+        'csfr_key' => 'sdfsgdfgertegxcfgd',
+        'app_hash' => 'sdfsdfsdfsd',
 
         // Renderer settings
         'renderer' => [
@@ -13,11 +15,25 @@ return [
 
         // database
         'db' => [
+            'driver' => 'mysql',
             'host' => 'localhost',
             'user' => 'root',
             'pass' => '',
-            'dbname' => 'gcm'
+            'database' => 'gcm',
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
 
+        ],
+
+        //mail
+        'mail' => [
+          'host' => '',
+          'smtp_auth' => '',
+          'smtp_secure' => '',
+          'port' => '',
+          'username' => '',
+          'password' => '',
         ],
 
 
