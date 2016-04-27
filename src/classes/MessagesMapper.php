@@ -3,7 +3,7 @@ class MessagesMapper extends Mapper
 {
     public function getMessages() {
         $sql = "SELECT *
-            from messages m";
+            from forms m";
         $stmt = $this->db->query($sql);
         $results = [];
         while($row = $stmt->fetch()) {
